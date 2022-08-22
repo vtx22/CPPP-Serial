@@ -16,11 +16,6 @@ int main(int argc, char *argv[])
       return 0;
    }
 
-   for (uint8_t i = 0; i < 255; i++)
-   {
-      uartData.push_back({i});
-   }
-
    // UART INIT
    UART uart(argv[1], std::stoi(argv[2]), &uartData, &mutex);
    uart.setMessageSize(std::stoi(argv[3]) ? 8 : 6);
@@ -52,7 +47,10 @@ int main(int argc, char *argv[])
       plotter.setTitle("Serial Data");
       plotter.setPlotMode(XY_ONLY);
       mutex.lock();
-      plotter.newDataset(uartData[0].values, LINE, sf::Color::Red);
+      for (auto const &data : uartData)
+      {
+         plotter.newDataset(data.values, LINE, data.color);
+      }
       mutex.unlock();
       plotter.showPlot();
 

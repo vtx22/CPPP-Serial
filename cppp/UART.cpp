@@ -108,6 +108,13 @@ void UART::addDataFromPacket(std::vector<DATASET> *sets)
    {
       PACKET packet = readPacket();
       _mutex->lock();
+      if (sets->size() < packet.id + 1)
+      {
+         for (uint8_t i = sets->size(); i < packet.id + 1; i++)
+         {
+            sets->push_back({i});
+         }
+      }
       sets->at(packet.id).values.push_back(packet.value);
       _mutex->unlock();
    }
