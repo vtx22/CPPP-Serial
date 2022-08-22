@@ -1,0 +1,14 @@
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\bin\Release\SerialPlotter.exe.config
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\bin\Release\SerialPlotter.exe
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\bin\Release\SerialPlotter.pdb
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\bin\Release\MetroFramework.Design.dll
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\bin\Release\MetroFramework.dll
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\bin\Release\MetroFramework.Fonts.dll
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\obj\Release\SerialPlotter.csprojAssemblyReference.cache
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\obj\Release\SerialPlotter.Form1.resources
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\obj\Release\SerialPlotter.Properties.Resources.resources
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\obj\Release\SerialPlotter.csproj.GenerateResource.cache
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\obj\Release\SerialPlotter.csproj.CoreCompileInputs.cache
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\obj\Release\SerialPlotter.csproj.CopyComplete
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\obj\Release\SerialPlotter.exe
+F:\GITHUB\CPPP-Serial\SerialPlotter\SerialPlotter\obj\Release\SerialPlotter.pdb
