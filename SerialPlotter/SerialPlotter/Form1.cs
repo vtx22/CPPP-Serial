@@ -9,6 +9,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace SerialPlotter
@@ -42,6 +43,8 @@ namespace SerialPlotter
             arguments += Convert.ToInt16(timeCB.Checked).ToString() + " ";
             arguments += Convert.ToInt16(loggingCB.Checked).ToString() + " ";
             arguments += Convert.ToInt16(fullscreenCB.Checked).ToString() + " ";
+            arguments += resWidthTB.Text + " ";
+            arguments += resHeightTB.Text + " ";
             psi.Arguments = arguments;
             Console.WriteLine(arguments);
             process = Process.Start(psi);
@@ -85,7 +88,7 @@ namespace SerialPlotter
         private void closeButton_Click(object sender, EventArgs e)
         {
             closePlotter();
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void closePlotterBTN_Click(object sender, EventArgs e)
@@ -127,5 +130,52 @@ namespace SerialPlotter
             mouseDown = false;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fullscreenCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(fullscreenCB.Checked) 
+            {
+                resWidthTB.Text = Screen.PrimaryScreen.Bounds.Width.ToString();
+                resHeightTB.Text = Screen.PrimaryScreen.Bounds.Height.ToString();
+                resHeightTB.Enabled = false;
+                resWidthTB.Enabled = false;
+                
+
+            }
+            else 
+            {
+                resHeightTB.Enabled = true;
+                resWidthTB.Enabled = true;
+            }
+        }
     }
 }

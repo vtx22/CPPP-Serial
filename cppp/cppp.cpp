@@ -365,7 +365,16 @@ void CPPP::calculateAutoscaleLimits()
       return;
    }
 
-   float minX = 0, minY = 0, maxX = 0, maxY = 0;
+   float minX, minY, maxX, maxY;
+   if (dataArray.size() == 0)
+   {
+      minX = 0, minY = 0, maxX = 1, maxY = 1;
+   }
+   else
+   {
+      minX = INFINITY, minY = INFINITY, maxX = -INFINITY, maxY = -INFINITY;
+   }
+
    for (auto const &datStruct : dataArray)
    {
       if (_autoScaleX)
@@ -400,7 +409,7 @@ void CPPP::calculateAutoscaleLimits()
 
    if (_autoScaleX)
    {
-      if (minX == maxX)
+      if (abs(minX - maxX) < 1 / 1000000.f)
       {
          minX = minX - 0.1 * abs(minX);
          maxX = maxX + 0.1 * abs(maxX);
@@ -410,7 +419,7 @@ void CPPP::calculateAutoscaleLimits()
    }
    if (_autoScaleY)
    {
-      if (minY == maxY)
+      if (abs(minY - maxY) < 1 / 1000000.f)
       {
          minY = minY - 0.1 * abs(minY);
          maxY = maxY + 0.1 * abs(maxY);

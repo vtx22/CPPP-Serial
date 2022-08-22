@@ -68,7 +68,7 @@ void UART::setMessageSize(uint8_t messageSize)
 
 float UART::bytes2float(std::vector<uint8_t> data)
 {
-   if (_lsbFirst)
+   if (!_lsbFirst)
    {
       std::reverse(data.begin(), data.end());
    }

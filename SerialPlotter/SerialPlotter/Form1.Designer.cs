@@ -42,14 +42,17 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.baudRateDD = new MetroFramework.Controls.MetroComboBox();
             this.byteorderCB = new MetroFramework.Controls.MetroCheckBox();
+            this.resWidthTB = new MetroFramework.Controls.MetroTextBox();
+            this.resHeightTB = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // startButton
             // 
             this.startButton.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.startButton.Location = new System.Drawing.Point(9, 258);
+            this.startButton.Location = new System.Drawing.Point(12, 228);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(147, 52);
+            this.startButton.Size = new System.Drawing.Size(150, 50);
             this.startButton.TabIndex = 0;
             this.startButton.TabStop = false;
             this.startButton.Text = "Start Plotter";
@@ -78,7 +81,7 @@
             this.checksumCB.AutoSize = true;
             this.checksumCB.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.checksumCB.ForeColor = System.Drawing.Color.White;
-            this.checksumCB.Location = new System.Drawing.Point(12, 116);
+            this.checksumCB.Location = new System.Drawing.Point(12, 128);
             this.checksumCB.Name = "checksumCB";
             this.checksumCB.Size = new System.Drawing.Size(109, 25);
             this.checksumCB.TabIndex = 2;
@@ -93,7 +96,7 @@
             this.serialPortCB.ItemHeight = 23;
             this.serialPortCB.Location = new System.Drawing.Point(12, 81);
             this.serialPortCB.Name = "serialPortCB";
-            this.serialPortCB.Size = new System.Drawing.Size(121, 29);
+            this.serialPortCB.Size = new System.Drawing.Size(147, 29);
             this.serialPortCB.TabIndex = 3;
             this.serialPortCB.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.serialPortCB.UseSelectable = true;
@@ -117,10 +120,10 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(12, 43);
+            this.metroTile1.Location = new System.Drawing.Point(12, 44);
             this.metroTile1.Margin = new System.Windows.Forms.Padding(0);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(467, 2);
+            this.metroTile1.Size = new System.Drawing.Size(389, 2);
             this.metroTile1.TabIndex = 5;
             this.metroTile1.Text = "metroTile1";
             this.metroTile1.UseSelectable = true;
@@ -129,7 +132,7 @@
             // 
             this.closeButton.BackColor = System.Drawing.Color.Maroon;
             this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(427, 12);
+            this.closeButton.Location = new System.Drawing.Point(349, 9);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(52, 23);
             this.closeButton.Style = MetroFramework.MetroColorStyle.Red;
@@ -145,7 +148,7 @@
             this.timeCB.AutoSize = true;
             this.timeCB.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.timeCB.ForeColor = System.Drawing.Color.White;
-            this.timeCB.Location = new System.Drawing.Point(12, 147);
+            this.timeCB.Location = new System.Drawing.Point(12, 159);
             this.timeCB.Name = "timeCB";
             this.timeCB.Size = new System.Drawing.Size(130, 25);
             this.timeCB.TabIndex = 7;
@@ -158,9 +161,9 @@
             // 
             this.closePlotterBTN.BackColor = System.Drawing.Color.Maroon;
             this.closePlotterBTN.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.closePlotterBTN.Location = new System.Drawing.Point(162, 258);
+            this.closePlotterBTN.Location = new System.Drawing.Point(166, 228);
             this.closePlotterBTN.Name = "closePlotterBTN";
-            this.closePlotterBTN.Size = new System.Drawing.Size(147, 52);
+            this.closePlotterBTN.Size = new System.Drawing.Size(150, 50);
             this.closePlotterBTN.TabIndex = 8;
             this.closePlotterBTN.TabStop = false;
             this.closePlotterBTN.Text = "Close Plotter";
@@ -174,11 +177,11 @@
             this.loggingCB.AutoSize = true;
             this.loggingCB.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.loggingCB.ForeColor = System.Drawing.Color.White;
-            this.loggingCB.Location = new System.Drawing.Point(12, 178);
+            this.loggingCB.Location = new System.Drawing.Point(12, 190);
             this.loggingCB.Name = "loggingCB";
-            this.loggingCB.Size = new System.Drawing.Size(151, 25);
+            this.loggingCB.Size = new System.Drawing.Size(94, 25);
             this.loggingCB.TabIndex = 9;
-            this.loggingCB.Text = "Enable Logging";
+            this.loggingCB.Text = "Logging";
             this.loggingCB.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.loggingCB.UseCustomForeColor = true;
             this.loggingCB.UseSelectable = true;
@@ -188,7 +191,7 @@
             this.fullscreenCB.AutoSize = true;
             this.fullscreenCB.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.fullscreenCB.ForeColor = System.Drawing.Color.White;
-            this.fullscreenCB.Location = new System.Drawing.Point(12, 209);
+            this.fullscreenCB.Location = new System.Drawing.Point(166, 159);
             this.fullscreenCB.Name = "fullscreenCB";
             this.fullscreenCB.Size = new System.Drawing.Size(105, 25);
             this.fullscreenCB.TabIndex = 10;
@@ -196,13 +199,14 @@
             this.fullscreenCB.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.fullscreenCB.UseCustomForeColor = true;
             this.fullscreenCB.UseSelectable = true;
+            this.fullscreenCB.CheckedChanged += new System.EventHandler(this.fullscreenCB_CheckedChanged);
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel3.ForeColor = System.Drawing.Color.White;
-            this.metroLabel3.Location = new System.Drawing.Point(139, 59);
+            this.metroLabel3.Location = new System.Drawing.Point(166, 59);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(74, 19);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Black;
@@ -220,9 +224,9 @@
             "19200",
             "38400",
             "115200"});
-            this.baudRateDD.Location = new System.Drawing.Point(139, 81);
+            this.baudRateDD.Location = new System.Drawing.Point(166, 81);
             this.baudRateDD.Name = "baudRateDD";
-            this.baudRateDD.Size = new System.Drawing.Size(121, 29);
+            this.baudRateDD.Size = new System.Drawing.Size(147, 29);
             this.baudRateDD.TabIndex = 11;
             this.baudRateDD.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.baudRateDD.UseSelectable = true;
@@ -232,7 +236,7 @@
             this.byteorderCB.AutoSize = true;
             this.byteorderCB.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.byteorderCB.ForeColor = System.Drawing.Color.White;
-            this.byteorderCB.Location = new System.Drawing.Point(215, 116);
+            this.byteorderCB.Location = new System.Drawing.Point(166, 128);
             this.byteorderCB.Name = "byteorderCB";
             this.byteorderCB.Size = new System.Drawing.Size(94, 25);
             this.byteorderCB.TabIndex = 13;
@@ -241,12 +245,99 @@
             this.byteorderCB.UseCustomForeColor = true;
             this.byteorderCB.UseSelectable = true;
             // 
+            // resWidthTB
+            // 
+            // 
+            // 
+            // 
+            this.resWidthTB.CustomButton.Image = null;
+            this.resWidthTB.CustomButton.Location = new System.Drawing.Point(43, 1);
+            this.resWidthTB.CustomButton.Name = "";
+            this.resWidthTB.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.resWidthTB.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.resWidthTB.CustomButton.TabIndex = 1;
+            this.resWidthTB.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.resWidthTB.CustomButton.UseSelectable = true;
+            this.resWidthTB.CustomButton.Visible = false;
+            this.resWidthTB.Lines = new string[] {
+        "1600"};
+            this.resWidthTB.Location = new System.Drawing.Point(166, 192);
+            this.resWidthTB.MaxLength = 10;
+            this.resWidthTB.Name = "resWidthTB";
+            this.resWidthTB.PasswordChar = '\0';
+            this.resWidthTB.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.resWidthTB.SelectedText = "";
+            this.resWidthTB.SelectionLength = 0;
+            this.resWidthTB.SelectionStart = 0;
+            this.resWidthTB.ShortcutsEnabled = true;
+            this.resWidthTB.Size = new System.Drawing.Size(67, 23);
+            this.resWidthTB.TabIndex = 22;
+            this.resWidthTB.Text = "1600";
+            this.resWidthTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.resWidthTB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.resWidthTB.UseSelectable = true;
+            this.resWidthTB.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.resWidthTB.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // resHeightTB
+            // 
+            // 
+            // 
+            // 
+            this.resHeightTB.CustomButton.Image = null;
+            this.resHeightTB.CustomButton.Location = new System.Drawing.Point(43, 1);
+            this.resHeightTB.CustomButton.Name = "";
+            this.resHeightTB.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.resHeightTB.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.resHeightTB.CustomButton.TabIndex = 1;
+            this.resHeightTB.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.resHeightTB.CustomButton.UseSelectable = true;
+            this.resHeightTB.CustomButton.Visible = false;
+            this.resHeightTB.Lines = new string[] {
+        "900"};
+            this.resHeightTB.Location = new System.Drawing.Point(249, 192);
+            this.resHeightTB.MaxLength = 10;
+            this.resHeightTB.Name = "resHeightTB";
+            this.resHeightTB.PasswordChar = '\0';
+            this.resHeightTB.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.resHeightTB.SelectedText = "";
+            this.resHeightTB.SelectionLength = 0;
+            this.resHeightTB.SelectionStart = 0;
+            this.resHeightTB.ShortcutsEnabled = true;
+            this.resHeightTB.Size = new System.Drawing.Size(67, 23);
+            this.resHeightTB.TabIndex = 23;
+            this.resHeightTB.Text = "900";
+            this.resHeightTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.resHeightTB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.resHeightTB.UseSelectable = true;
+            this.resHeightTB.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.resHeightTB.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.resHeightTB.Click += new System.EventHandler(this.metroTextBox6_Click);
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel8.ForeColor = System.Drawing.Color.White;
+            this.metroLabel8.Location = new System.Drawing.Point(233, 195);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(0);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(16, 20);
+            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel8.TabIndex = 24;
+            this.metroLabel8.Text = "x";
+            this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel8.UseCustomForeColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.ClientSize = new System.Drawing.Size(491, 322);
+            this.ClientSize = new System.Drawing.Size(417, 295);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.resHeightTB);
+            this.Controls.Add(this.resWidthTB);
             this.Controls.Add(this.byteorderCB);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.baudRateDD);
@@ -265,6 +356,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "CPPP - Serial Plotter";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
@@ -289,6 +381,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroComboBox baudRateDD;
         private MetroFramework.Controls.MetroCheckBox byteorderCB;
+        private MetroFramework.Controls.MetroTextBox resWidthTB;
+        private MetroFramework.Controls.MetroTextBox resHeightTB;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
     }
 }
 

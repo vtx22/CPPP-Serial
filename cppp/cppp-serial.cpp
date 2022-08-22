@@ -7,10 +7,10 @@
 std::vector<DATASET> uartData;
 sf::Mutex mutex;
 
-// cpp-serial COM1 115200 CHECKSUM LSBFIRST IGNORETIME LOGGING FULLSCREEN
+// cpp-serial COM1 115200 CHECKSUM LSBFIRST IGNORETIME LOGGING FULLSCREEN WIDTH HEIGHT
 int main(int argc, char *argv[])
 {
-   if (argc < 8)
+   if (argc < 10)
    {
       std::cout << "ERROR: Too few arguments!\n";
       return 0;
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
    sf::ContextSettings settings;
    settings.antialiasingLevel = 4;
 
-   sf::RenderWindow window(sf::VideoMode(1850, 990), "CPPP - CPlusPlusPlotter | Serial Plotter", std::stoi(argv[7]) ? (sf::Style::Fullscreen) : (sf::Style::Close), settings);
+   sf::RenderWindow window(sf::VideoMode(std::stoi(argv[8]), std::stoi(argv[9])), "CPPP - CPlusPlusPlotter | Serial Plotter", std::stoi(argv[7]) ? (sf::Style::Fullscreen) : (sf::Style::Close), settings);
 
    CPPP plotter(&window);
 
@@ -58,6 +58,8 @@ int main(int argc, char *argv[])
 
       window.display();
    }
+
+   uartThread.terminate();
 
    return 0;
 }
