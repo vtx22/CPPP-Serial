@@ -147,9 +147,9 @@
             this.timeCB.ForeColor = System.Drawing.Color.White;
             this.timeCB.Location = new System.Drawing.Point(12, 147);
             this.timeCB.Name = "timeCB";
-            this.timeCB.Size = new System.Drawing.Size(194, 25);
+            this.timeCB.Size = new System.Drawing.Size(130, 25);
             this.timeCB.TabIndex = 7;
-            this.timeCB.Text = "Evenly Spaced Points";
+            this.timeCB.Text = "Space Evenly";
             this.timeCB.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.timeCB.UseCustomForeColor = true;
             this.timeCB.UseSelectable = true;
@@ -232,7 +232,7 @@
             this.byteorderCB.AutoSize = true;
             this.byteorderCB.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.byteorderCB.ForeColor = System.Drawing.Color.White;
-            this.byteorderCB.Location = new System.Drawing.Point(227, 116);
+            this.byteorderCB.Location = new System.Drawing.Point(215, 116);
             this.byteorderCB.Name = "byteorderCB";
             this.byteorderCB.Size = new System.Drawing.Size(94, 25);
             this.byteorderCB.TabIndex = 13;
@@ -240,7 +240,6 @@
             this.byteorderCB.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.byteorderCB.UseCustomForeColor = true;
             this.byteorderCB.UseSelectable = true;
-            
             // 
             // Form1
             // 
